@@ -16,7 +16,7 @@ jobs:
         run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
         
       - name: Scan YAML files
-        run: kubescape scan framework nsa -t 9 *.yaml --submit --account=d31337ea-0e0c-495c-a662-3bc7ab4d9883
+        run: kubescape scan framework nsa -t 50 *.yaml --submit --account=d31337ea-0e0c-495c-a662-3bc7ab4d9883
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.18.0

@@ -22,7 +22,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
         env:
-           SLACK_CHANNEL: kubescape
+         
            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}sa -t 80 *.yaml
         
   

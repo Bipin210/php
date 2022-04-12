@@ -44,8 +44,8 @@ jobs:
       runs-on: ubuntu-latest
     # Only run this workflow when "build" workflow succeeds
       needs: [nsa-security-check]
-    # Only run this workflow if it target is main branch on pull_request event.
-      if: ${{ github.base_ref == 'main' && github.event_name == 'pull_request' }}
+    # Only run this workflow if it target is master branch on pull_request event.
+      if: ${{ github.base_ref == 'master' && github.event_name == 'push_request' }}
 
       steps:
 

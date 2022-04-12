@@ -16,7 +16,8 @@ jobs:
         run: curl -s https://raw.githubusercontent.com/armosec/kubescape/master/install.sh | /bin/bash
         
       - name: Scan YAML files
-        run: kubescape scan framework n
+        run: kubescape scan framework nsa
+        
       - name: Send GitHub Action trigger data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.18.0
